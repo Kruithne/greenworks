@@ -43,7 +43,7 @@ NAN_MODULE_INIT(init) {
   // Set internal steam event handler.
   v8::Local<v8::Object> steam_events = Nan::New<v8::Object>();
   g_persistent_steam_events.Reset(steam_events);
-  Nan::Set(target, Nan::New("_steam_events").ToLocalChecked(), steam_events);
+  Nan::Set(target, Nan::New("steam_events").ToLocalChecked(), steam_events);
 
   greenworks::api::SteamAPIRegistry::GetInstance()->RegisterAllAPIs(target);
 
